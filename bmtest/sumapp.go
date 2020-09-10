@@ -54,8 +54,6 @@ func main() {
 		}
 
 		time.Sleep(time.Millisecond * 1000)
-
-		fmt.Println("")
 		value, _ = acc.BMi2r(0)
 		fmt.Println("Read Final value: ", value)
 	}
