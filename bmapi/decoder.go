@@ -1,6 +1,6 @@
 package bmapiusbuart
 
-//import "fmt"
+import "fmt"
 
 func (ba *BMAPI) decoder() {
 	for {
@@ -23,12 +23,16 @@ func (ba *BMAPI) decoder() {
 					ba.o0Mutex.Unlock()
 				}
 			case (b & cmdMASK) == cmdDVALIDH:
+				//fmt.Println(b)
 			case (b & cmdMASK) == cmdDVALIDL:
+				//fmt.Println(b)
 			case (b & cmdMASK) == cmdDRECVH:
+				//fmt.Println(b)
 			case (b & cmdMASK) == cmdDRECVL:
+				//fmt.Println(b)
 			default:
 				continue
-				//fmt.Println(b)
+				fmt.Println(b)
 			}
 		}
 	}
